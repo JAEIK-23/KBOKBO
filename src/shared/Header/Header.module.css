@@ -1,0 +1,36 @@
+.header {
+  background-color: white;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.headerMenu {
+  margin-right: 100px;
+  display: flex;
+  gap: 100px;
+}
+
+.headerItem {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.headerItem:hover {
+  color: #007bff;
+}
+.logo {
+  height: 40px;
+  margin-left: 20px;
+}
+
+.searchIcon {
+  height: 30px;
+  margin-right: 20px;
+}

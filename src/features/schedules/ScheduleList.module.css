@@ -1,0 +1,116 @@
+.wrapper {
+  padding: 16px;
+  margin-top: 50px;
+}
+
+.dateHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dateText {
+  min-width: 200px;
+  text-align: center;
+}
+
+.navBtn {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+  padding: 4px 10px;
+  transition: color 0.2s;
+  font-size: 40px;
+}
+
+.navBtn:hover {
+  color: #007bff;
+}
+
+.cardList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  flex: 0 0 200px;
+  background: #f9f9f9;
+  border: 1px solid grey;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 160px;
+}
+
+.time {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.team img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.vs {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px;
+  color: black;
+}
+.score {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.homeScore {
+  margin-left: 35px;
+}
+
+.awayScore {
+  margin-right: 35px;
+}
+
+.message {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  margin-top: 40px;
+}
+.team span {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}

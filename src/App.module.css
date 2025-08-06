@@ -1,0 +1,17 @@
+.app {
+  width: 100vw;
+}
+.container {
+  gap: 30px;
+  padding-top: 100px;
+  color: black;
+  background-color: #f9f9f9;
+  font-size: 14px;
+  height: auto;
+}
+.teamRanking {
+  display: flex;
+  gap: 50px;
+  padding: 16px;
+  justify-content: center;
+}

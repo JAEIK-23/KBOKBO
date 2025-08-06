@@ -1,0 +1,38 @@
+.container {
+  top: 80px;
+  left: 20px;
+  color: black;
+  background-color: #f9f9f9;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.hitterTh,
+.hitterTd {
+  padding: 6px 12px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.nameWrapper {
+  display: flex;
+  align-items: center;
+}
+.playerImg {
+  width: 30px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-right: 6px;
+  vertical-align: middle;
+}

@@ -1,0 +1,43 @@
+.container {
+  top: 80px;
+  left: 20px;
+  color: black;
+  background-color: #f9f9f9;
+  width: fit-content;
+  font-size: 14px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #f0f0f0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  height: 30px;
+}
+th,
+td {
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.teamCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
