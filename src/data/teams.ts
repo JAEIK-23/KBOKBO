@@ -1,0 +1,136 @@
+export interface TeamMeta {
+  id: string;
+  name: string;
+  city: string;
+  stadium: string;
+  lat: number;
+  lng: number;
+  website?: string;
+  manager?: string;
+  founded?: number;
+  anthemQuery?: string;
+}
+
+export const TEAMS: TeamMeta[] = [
+  {
+    id: "kia",
+    name: "KIA 타이거즈",
+    city: "광주",
+    stadium: "광주-KIA 챔피언스 필드",
+    lat: 35.1685,
+    lng: 126.8894,
+    website: "https://tigers.co.kr",
+    manager: "이범호",
+    founded: 1982,
+    anthemQuery: "KIA 타이거즈 응원가",
+  },
+  {
+    id: "ssg",
+    name: "SSG 랜더스",
+    city: "인천",
+    stadium: "인천 SSG 랜더스필드",
+    lat: 37.4352,
+    lng: 126.6935,
+    website: "https://www.ssglanders.com",
+    manager: "이숭용",
+    founded: 2000,
+    anthemQuery: "SSG 랜더스 응원가",
+  },
+  {
+    id: "lg",
+    name: "LG 트윈스",
+    city: "서울",
+    stadium: "잠실야구장",
+    lat: 37.5121,
+    lng: 127.0726,
+    website: "https://www.lgtwins.com",
+    manager: "염경엽",
+    founded: 1982,
+    anthemQuery: "LG 트윈스 응원가",
+  },
+  {
+    id: "doosan",
+    name: "두산 베어스",
+    city: "서울",
+    stadium: "잠실야구장",
+    lat: 37.5121,
+    lng: 127.0726,
+    website: "https://www.doosanbears.com",
+    manager: "공석",
+    founded: 1982,
+    anthemQuery: "두산 베어스 응원가",
+  },
+  {
+    id: "kt",
+    name: "KT 위즈",
+    city: "수원",
+    stadium: "수원KT위즈파크",
+    lat: 37.2997,
+    lng: 127.0094,
+    website: "https://www.ktwiz.co.kr",
+    manager: "이강철",
+    founded: 2013,
+    anthemQuery: "KT 위즈 응원가",
+  },
+  {
+    id: "lotte",
+    name: "롯데 자이언츠",
+    city: "부산",
+    stadium: "사직야구장",
+    lat: 35.194,
+    lng: 129.0617,
+    website: "https://www.giantsclub.com",
+    manager: "김태형",
+    founded: 1982,
+    anthemQuery: "롯데 자이언츠 응원가",
+  },
+  {
+    id: "nc",
+    name: "NC 다이노스",
+    city: "창원",
+    stadium: "창원NC파크",
+    lat: 35.222,
+    lng: 128.5799,
+    website: "https://www.ncdinos.com",
+    manager: "강인권",
+    founded: 2011,
+    anthemQuery: "NC 다이노스 응원가",
+  },
+  {
+    id: "samsung",
+    name: "삼성 라이온즈",
+    city: "대구",
+    stadium: "대구삼성라이온즈파크",
+    lat: 35.8419,
+    lng: 128.6811,
+    website: "https://www.samsunglions.com",
+    manager: "박진만",
+    founded: 1982,
+    anthemQuery: "삼성 라이온즈 응원가",
+  },
+  {
+    id: "kiwoom",
+    name: "키움 히어로즈",
+    city: "서울",
+    stadium: "고척스카이돔",
+    lat: 37.4982,
+    lng: 126.8679,
+    website: "https://www.heroesbaseball.co.kr",
+    manager: "홍원기",
+    founded: 2008,
+    anthemQuery: "키움 히어로즈 응원가",
+  },
+  {
+    id: "hanwha",
+    name: "한화 이글스",
+    city: "대전",
+    stadium: "한화생명이글스파크",
+    lat: 36.317,
+    lng: 127.4286,
+    website: "https://www.hanwhaeagles.co.kr",
+    manager: "김경문",
+    founded: 1985,
+    anthemQuery: "한화 이글스 응원가",
+  },
+];
+export const getTeamById = (id: string) => TEAMS.find((t) => t.id === id);

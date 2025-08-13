@@ -21,10 +21,7 @@ export default function HighlightList() {
       if (!games) return [];
       const results = await Promise.all(
         games.map((game) => {
-          const gameDate = new Date(game.start_time)
-            .toISOString()
-            .slice(0, 10)
-            .replace(/-/g, ".");
+          const gameDate = new Date(game.start_time).toISOString().slice(0, 10);
           const team1 = game.competitors[0]?.name ?? "";
           const team2 = game.competitors[1]?.name ?? "";
           const query = `${gameDate} ${team1} vs ${team2} 하이라이트`;
@@ -37,12 +34,22 @@ export default function HighlightList() {
     staleTime: 1000 * 60 * 60,
   });
 
-  if (isLoading) return <p>경기 일정 불러오는 중...</p>;
+  if (isLoading)
+    return (
+      <div className={styles.container}>
+        <div className={styles.longSkeleton} />
+      </div>
+    );
   if (error instanceof Error)
     return <p style={{ color: "red" }}>에러: {error.message}</p>;
   if (!games || games.length === 0) return <p>오늘 경기 일정이 없습니다.</p>;
 
-  if (highlights.isLoading) return <p>하이라이트 영상 불러오는 중...</p>;
+  if (highlights.isLoading)
+    return (
+      <div className={styles.container}>
+        <div className={styles.longSkeleton} />
+      </div>
+    );
   if (highlights.isError) return <p>하이라이트 불러오기 실패 </p>;
 
   return (

@@ -1,0 +1,240 @@
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.headerMain {
+  display: flex;
+  flex-direction: column;
+}
+.headerTop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoBox {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #f3f4f6;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.logoBox img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+.titleArea {
+  min-width: 0;
+}
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+.meta {
+  color: #6b7280;
+  margin: 4px 0 8px;
+  font-size: 14px;
+}
+.metaRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #374151;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  background: #d1d5db;
+  border-radius: 50%;
+  display: inline-block;
+}
+.siteBtn {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 12px;
+  color: #111827;
+  text-decoration: none;
+}
+
+.headerSide {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.videoWrapMinimal {
+  width: 100%;
+  max-width: 420px;
+}
+
+.videoFrame {
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+}
+.iframeSmall {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+}
+.thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.videoMetaMinimal {
+  padding-top: 6px;
+  font-size: 13px;
+}
+
+.skeleton,
+.empty {
+  padding: 12px;
+  color: #6b7280;
+}
+
+.section {
+  margin-top: 14px;
+}
+.sectionTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+.mapCard {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+.miniMap {
+  width: 100%;
+  height: 280px;
+}
+.mapActions {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.openBtn {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 12px;
+  color: #111827;
+  text-decoration: none;
+}
+.openBtn:hover {
+  background: #f3f4f6;
+}
+
+/* 선수 명단 */
+.rosterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+.tabs {
+  display: inline-flex;
+  gap: 6px;
+}
+.tabBtn {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f9fafb;
+  cursor: pointer;
+}
+.tabBtn:hover {
+  background: #f3f4f6;
+}
+.active {
+  background: #111827;
+  color: #fff;
+}
+
+.rosterTableWrap {
+  overflow: auto;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background: #fff;
+}
+.rosterTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.rosterTable thead th {
+  text-align: center;
+  padding: 10px 12px;
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  white-space: nowrap;
+}
+.rosterTable tbody td {
+  padding: 10px 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  vertical-align: middle;
+}
+.thName {
+  width: 240px;
+}
+
+.playerCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.playerCell img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f3f4f6;
+}
+.skelVideo,
+.skelText {
+  background: #e5e7eb;
+  border-radius: 8px;
+}
+
+.skelVideo {
+  height: 180px;
+}
+
+.skelText {
+  margin-top: 8px;
+  height: 12px;
+  width: 70%;
+}

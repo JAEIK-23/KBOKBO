@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
 import styles from "./playerStats-pitcher.module.css";
 import playerImg from "../../assets/playerImg";
+import pitchersData from "../../data/kbo-pitcher-stats.json"; // JSON 직접 import
 
-interface pitcher {
+interface Pitcher {
   rank: string;
   name: string;
   team: string;
@@ -25,22 +25,10 @@ interface pitcher {
 }
 
 export default function TopEraTable() {
-  const [topPitchers, setTopPitchers] = useState<pitcher[]>([]);
-
-  useEffect(() => {
-    fetch("/kbo-pitcher-stats.json")
-      .then((res) => res.json())
-      .then((data: pitcher[]) => {
-        const sorted = [...data]
-          .filter((player) => !isNaN(Number(player.era)))
-          .sort((a, b) => Number(a.era) - Number(b.era))
-          .slice(0, 3);
-        setTopPitchers(sorted);
-      })
-      .catch((err) => {
-        console.error("❌ 데이터 불러오기 실패:", err);
-      });
-  }, []);
+  const topPitchers: Pitcher[] = [...(pitchersData as Pitcher[])]
+    .filter((player) => !isNaN(Number(player.era)))
+    .sort((a, b) => Number(a.era) - Number(b.era))
+    .slice(0, 3);
 
   return (
     <div className={styles.container}>

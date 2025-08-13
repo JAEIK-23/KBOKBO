@@ -11,9 +11,8 @@ export default function TeamRanking() {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className={styles.skeleton}></div>;
   }
-
   if (error) {
     return <div>Error: {error.message}</div>;
   }

@@ -24,8 +24,8 @@ export interface PeriodScore {
 }
 
 export interface SportEventStatus {
-  status: string; // ex: "closed", "live"
-  match_status: string; // ex: "ended"
+  status: string;
+  match_status: string;
   home_score: number;
   away_score: number;
   winner_id?: string;

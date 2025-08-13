@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
 import styles from "./playerStats-hitter.module.css";
 import playerImg from "../../assets/playerImg";
+import playersData from "../../data/kbo-player-stats.json"; // JSON 직접 import
 
 interface Player {
   rank: string;
@@ -17,22 +17,11 @@ interface Player {
 }
 
 export default function TopAvgTable() {
-  const [topPlayers, setTopPlayers] = useState<Player[]>([]);
-
-  useEffect(() => {
-    fetch("/kbo-player-stats.json")
-      .then((res) => res.json())
-      .then((data: Player[]) => {
-        const sorted = [...data]
-          .filter((player) => !isNaN(Number(player.avg)))
-          .sort((a, b) => Number(b.avg) - Number(a.avg))
-          .slice(0, 3);
-        setTopPlayers(sorted);
-      })
-      .catch((err) => {
-        console.error("❌ 데이터 불러오기 실패:", err);
-      });
-  }, []);
+  // 렌더 전에 한 번만 계산
+  const topPlayers: Player[] = [...(playersData as Player[])]
+    .filter((player) => !isNaN(Number(player.avg)))
+    .sort((a, b) => Number(b.avg) - Number(a.avg))
+    .slice(0, 3);
 
   return (
     <div className={styles.container}>

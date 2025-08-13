@@ -53,7 +53,7 @@ export default function ScheduleList() {
         </button>
       </div>
 
-      {isLoading && <p className={styles.message}>불러오는 중...</p>}
+      {isLoading && <div className={styles.longSkeleton}></div>}
       {error instanceof Error && (
         <p className={styles.error}>에러: {error.message}</p>
       )}

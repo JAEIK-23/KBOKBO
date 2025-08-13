@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import styles from "./App.module.css";
-import Footer from "./shared/Footer/Footer";
-import Header from "./shared/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 import PlayersPage from "./pages/playersPage";
 import TeamsPage from "./pages/teamsPage";
 import RankingPage from "./pages/rankingPage";
 import SchedulePage from "./pages/schedulePage";
+import TeamDetailPage from "./pages/TeamDetailPage";
 
 import TeamRanking from "./features/team-ranking/TeamRanking";
 import ScheduleList from "./features/schedules/ScheduleList";
@@ -30,6 +31,9 @@ export default function App() {
             <Route path="/ranking" element={<RankingPage />} />
             <Route path="/players" element={<PlayersPage />} />
             <Route path="/teams" element={<TeamsPage />} />
+
+            <Route path="/teams/:id" element={<TeamDetailPage />} />
+
             <Route
               path="/"
               element={

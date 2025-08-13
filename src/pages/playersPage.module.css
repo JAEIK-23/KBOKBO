@@ -1,0 +1,102 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pitcherHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.teamSelect {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.pitcherHeader h3 {
+  margin: 0;
+}
+
+.detailBox {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  min-height: 200px;
+  background-color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.detailFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.detailName {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+.detailInfo {
+  margin-top: 30px;
+  margin-left: auto;
+  flex: 1;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 24px;
+}
+
+.playerImage {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+.detailInfo p {
+  margin: 0;
+}
+
+.emptyText {
+  color: #888;
+  text-align: center;
+  line-height: 200px;
+}
+
+.detailBox h3 {
+  margin-top: 0;
+}
+
+.detailBox p {
+  margin: 4px 0;
+}
+
+.listTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.listTable th,
+.listTable td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.clickableRow {
+  cursor: pointer;
+}
+
+.clickableRow:hover {
+  background-color: #f0f0f0;
+}
