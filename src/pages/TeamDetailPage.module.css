@@ -134,6 +134,7 @@
 .miniMap {
   width: 100%;
   height: 280px;
+  z-index: 50;
 }
 .mapActions {
   display: flex;
@@ -154,7 +155,6 @@
   background: #f3f4f6;
 }
 
-/* 선수 명단 */
 .rosterHeader {
   display: flex;
   align-items: center;

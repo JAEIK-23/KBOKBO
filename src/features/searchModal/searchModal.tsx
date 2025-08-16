@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./searchModal.module.css";
 import playerImg from "../../assets/playerImg";
 
@@ -79,6 +79,15 @@ export default function SearchModal({ onClose }: SearchModalProps) {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
 
   const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (e) => {
     if (e.key === "Enter") handleSearch();
