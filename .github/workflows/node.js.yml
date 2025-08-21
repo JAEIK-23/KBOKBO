@@ -34,7 +34,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./build" # 2. 빌드 결과물 경로 (Vite: dist, React: build)
+          path: "./dist" # 2. 빌드 결과물 경로 (Vite: dist, React: build)
 
   deploy:
     needs: build
