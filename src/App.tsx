@@ -19,7 +19,7 @@ import TopEraTable from "./features/playerStats/playerStats-pitcher";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/KBOKBO">
       <div className={styles.App}>
         <div className={styles.header}>
           <Header />
