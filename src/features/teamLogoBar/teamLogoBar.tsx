@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import teamLogos from "../../assets/team-logo";
 import { TEAMS } from "../../data/teams";
-import styles from "./TeamLogoBar.module.css";
+import styles from "./teamLogoBar.module.css";
 
 export default function TeamLogoBar() {
   return (

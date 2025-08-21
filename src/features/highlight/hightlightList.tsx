@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchKboSchedule, type Game } from "../../api/ScheduleApi";
 import { fetchHighlightVideo, type VideoInfo } from "../../api/YoutubeApi";
 import { HighlightCard } from "./highlightCard";
-import styles from "./HighlightList.module.css";
+import styles from "./highlightList.module.css";
 
 export default function HighlightList() {
   const {

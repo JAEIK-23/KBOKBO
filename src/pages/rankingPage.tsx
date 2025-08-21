@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import styles from "./rankingPage.module.css";
 import playerImg from "../assets/playerImg";
 

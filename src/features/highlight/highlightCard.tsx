@@ -1,4 +1,4 @@
-import styles from "./HighlightList.module.css";
+import styles from "./highlightList.module.css";
 
 interface HighlightCardProps {
   title: string;
