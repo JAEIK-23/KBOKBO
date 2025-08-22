@@ -29,9 +29,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-        env: # 👈 여기를 추가하세요!
-          VITE_SPORTSRADAR_API_KEY: ${{ q7X8DPVKYynySFHd02M2LI8YoeqJtMQkPVxOpULa }}
-          VITE_YOUTUBE_API_KEY: ${{ AIzaSyDkKUHuiIp90hFamqYBLvqGao9pL2_P1xs }}
+        env: # 👈 이 부분입니다!
+          VITE_SPORTSRADAR_API_KEY: ${{ secrets.VITE_SPORTSRADAR_API_KEY }} # 👈 여기에 등록된 시크릿 이름 사용
+          VITE_YOUTUBE_API_KEY: ${{ secrets.VITE_YOUTUBE_API_KEY }} # 👈 여기에 등록된 시크릿 이름 사용
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
