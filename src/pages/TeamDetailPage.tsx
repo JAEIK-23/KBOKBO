@@ -109,7 +109,7 @@ export default function TeamDetailPage() {
   } = useQuery<Pitcher[]>({
     queryKey: ["pitchers", team.id],
     queryFn: async () => {
-      const res = await fetch(`/${team.id}/${team.id}-pitcher.json`, {
+      const res = await fetch(`./${team.id}/${team.id}-pitcher.json`, {
         cache: "no-store",
       });
       if (!res.ok) return [];
@@ -125,7 +125,7 @@ export default function TeamDetailPage() {
   } = useQuery<Hitter[]>({
     queryKey: ["hitters", team.id],
     queryFn: async () => {
-      const res = await fetch(`/${team.id}/${team.id}-hitter.json`, {
+      const res = await fetch(`./${team.id}/${team.id}-hitter.json`, {
         cache: "no-store",
       });
       if (!res.ok) return [];
