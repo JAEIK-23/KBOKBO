@@ -70,7 +70,7 @@ export default function PlayersPage() {
   } = useQuery({
     queryKey: ["pitchers", selectedTeam],
     queryFn: () =>
-      fetch(`/${selectedTeam}/${selectedTeam}-pitcher.json`).then((res) =>
+      fetch(`./${selectedTeam}/${selectedTeam}-pitcher.json`).then((res) =>
         res.json()
       ),
   });
@@ -82,7 +82,7 @@ export default function PlayersPage() {
   } = useQuery({
     queryKey: ["hitters", selectedTeam],
     queryFn: () =>
-      fetch(`/${selectedTeam}/${selectedTeam}-hitter.json`).then((res) =>
+      fetch(`./${selectedTeam}/${selectedTeam}-hitter.json`).then((res) =>
         res.json()
       ),
   });
